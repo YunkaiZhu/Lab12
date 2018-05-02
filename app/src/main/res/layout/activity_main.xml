@@ -4,7 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="top|center_horizontal"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/get_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 </LinearLayout>

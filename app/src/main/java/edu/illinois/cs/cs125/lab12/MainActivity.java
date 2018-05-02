@@ -3,6 +3,9 @@ package edu.illinois.cs.cs125.lab12;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,8 +40,15 @@ public final class MainActivity extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         setContentView(R.layout.activity_main);
-
-        startAPICall();
+        final Button update = findViewById(R.id.get_weather);
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+                Log.d(TAG, "Update button clicked");
+                startAPICall();
+            }
+        });
+        final TextView display = findViewById(R.id.textView2);
     }
 
     /**
